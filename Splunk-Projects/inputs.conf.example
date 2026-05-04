@@ -1,0 +1,14 @@
+# --- Windows Event Log Monitor --- 
+
+
+[WinEventLog://Security]
+disabled = 0
+index = endpoint_windows
+
+[WinEventLog://System]
+disabled = 0
+index = endpoint_windows
+
+[WinEventLog://Application]
+disabled = 0
+index = endpoint_windows

@@ -1,0 +1,12 @@
+'''Splunk Searches saved and documented for convenience'''
+
+
+
+'''Search that proves the distributed connection is working. Identifies inputting hostnames.'''
+index="endpoint_windows" | stats count by host
+
+'''Shows the distribution between Security, System, and Application logs. Security was the loudest.'''
+index="endpoint_windows" | stats count by source
+
+'''Displays what codes are coming through, windows in this case.'''
+index="endpoint_windows" | stats count by EventCode | sort - count
